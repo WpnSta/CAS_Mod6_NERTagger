@@ -131,7 +131,7 @@ with gr.Blocks(title="NER Literary Texts", theme=theme) as demo:
             file_csv = gr.File(label="Download CSV", visible=False)
             file_button.click(fn=process_file, inputs=file_input, outputs=[file_output, file_csv])
 
-    gr.Markdown("### Entity Types\n| Tag | Meaning |\n|---|---|\n| PER | Person | \n| GPE | Geo-political entity |\n| LOC | Location |\n| ORG | Organization |\n| FAC | Facility |\n| VEH | Vehicle |\n| TIME | Temporal expression |")
+    gr.Markdown("### Entity Types\n| Tag | Meaning |\n|---|---|\n| PER | Person, character, also animals with active role in the narrative | \n| GPE | Geo-political entity, e.g. London, the city |\n| LOC | Location, e.g. the sea, the beach |\n| ORG | Organization, e.g. the army, the court |\n| FAC | Facility, e.g. the kitchen, the street |\n| VEH | Vehicle, e.g. the coach, the boats |\n| TIME | Temporal or historical reference, e.g. in the morning |")
 
 if __name__ == "__main__":
     demo.launch()
