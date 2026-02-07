@@ -99,7 +99,7 @@ theme = gr.themes.Default(
     font=gr.themes.GoogleFont("Raleway"),
 )
 
-with gr.Blocks(title="NER Literary Texts", theme=theme) as demo:
+with gr.Blocks(title="NER Literary Texts") as demo:
     gr.Markdown("# Named Entity Recognition for Literary Texts")
     gr.Markdown("Detect persons, places, organizations, and more in **English**, **French**, and **Italian** text. The texts will be analysed using a fine-tuned XLM-RoBERTa model that was trained with literary texts in these languages dating from the 19th to the 20th century. For more technical information see https://github.com/WpnSta/CAS_Mod4_NER.")
 
@@ -134,4 +134,4 @@ with gr.Blocks(title="NER Literary Texts", theme=theme) as demo:
     gr.Markdown("### Entity Types\n| Tag | Meaning |\n|---|---|\n| PER | Person, character, also animals with active role in the narrative | \n| GPE | Geo-political entity, e.g. London, the city |\n| LOC | Location, e.g. the sea, the beach |\n| ORG | Organization, e.g. the army, the court |\n| FAC | Facility, e.g. the kitchen, the street |\n| VEH | Vehicle, e.g. the coach, the boats |\n| TIME | Temporal or historical reference, e.g. in the morning |")
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(theme=theme, ssr_mode=False)
